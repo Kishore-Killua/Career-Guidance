@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  /* background: url('asset/img/background.png') right no-repeat fixed; */
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_box .sidebar_menu {
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .logo {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .logo a {
+  color: #363636;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+.sidebar_menu .menu {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+
+.sidebar_menu .menu i {
+  color: #363636;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+.sidebar_menu .menu a {
+  color: #363636;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sidebar_menu .menu li:hover {
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .social_media {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.sidebar_menu .social_media i {
+  text-decoration: none;
+  padding: 0 5px;
+  color: #363636;
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.sidebar_menu .social_media i:hover {
+  opacity: 1;
+  transition: all 0.2s linear;
+  transform: scale(1.01);
+  color: #724ae8;
+}
+
+#check {
+  display: none;
+}
+
+.main_box .btn_one i {
+  color: #363636;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .btn_two i {
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.btn_one i:hover {
+  font-size: 29px;
+}
+
+.btn_two i:hover {
+  font-size: 24px;
+}
+
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i {
+  opacity: 1;
+}
+
+.container,
+.container_method {
+  height: 62rem;
+  width: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.container h1{
+  font-size: 50px;
+  padding: 150px 20px 20px 120px;
+}
+.container p {
+  /* padding: 250px 80px 30px 150px; */
+  padding: 50px 0 0 120px;
+  line-height: 40px;
+  color: #363636;
+  font-size: 20px;
+  width: 1080px;
+}
+.container .con .go{
+  padding: 0px 20px;
+  font-size: 20px; 
+  color: #fff;
+  margin-left: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.container .con .go:hover{
+  background: #4bc429;
+}
+.container img{
+  
+  margin: 250px 0 0 0;
+  height: 500px;
+  width: 700px;
+}
+/* =========================== Method start =============================================== */
+.container_method {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_method .type {
+  height: 500px;
+  width: 20%;
+  margin: 100px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container_method .type h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #724ae8;
+}
+.container_method .type p {
+  align-items: center;
+  padding: 25px;
+  line-height: 2rem;
+  text-align: justify;
+}
+.container_method .higher_study {
+  display: flex;
+  flex-direction: column;
+}
+.container_method .job {
+  display: flex;
+  flex-direction: column;
+}
+.container_method a {
+  text-decoration: none;
+  color: #363636;
+}
+.container_method h2 {
+  font-weight: 300;
+  font-size: 22px;
+}
+.container_method p {
+  text-decoration: none;
+  font-size: 20px;
+}
+/* =========================== Method end =============================================== */
+
+::placeholder {
+  color: #363636;
+}
+
+.input-field input:is(:focus, :valid) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field input[type="date"] {
+  color: #363636;
+}
+
+.input-field input[type="date"]:valid {
+  color: #363636;
+}
+
+/* ============================ Contact Us =========================== */
+.container_body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_contact {
+  max-width: 1500px;
+  height: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 20px 40px 40px 20px;
+}
+
+.container_contact .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container_contact .content .left-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75px;
+  position: relative;
+}
+.content .left-side::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details {
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i {
+  font-size: 30px;
+  color: #363636;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic {
+  font-size: 24px;
+  font-weight: 500;
+  color: #724ae8;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two {
+  font-size: 14px;
+  color: #363636;
+}
+.container_contact .content .right-side {
+  width: 75%;
+  margin-left: 100px;
+}
+.content .right-side .topic-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #724ae8;
+  margin-top: 40px;
+}
+.content .right-side p {
+  margin-top: 15px;
+  color: #363636;
+}
+.right-side .input-box {
+  height: 55px;
+  width: 100%;
+  margin: 24px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box {
+  min-height: 110px;
+}
+.right-side.input-box textarea {
+  padding-top: 6px;
+}
+.right-side .button {
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #724ae8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover {
+  background: #724ae8;
+}
+/* ====================== Footer ==========================*/
+
+footer {
+  height: 28.1rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
+
+footer .footer_container {
+  width: 100%;
+  height: 28.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
+
+.row {
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col h4 {
+  color: #363636;
+  margin-bottom: 25px;
+  font-size: 24px;
+  position: relative;
+  font-family: "Poppins" sans-serif;
+}
+
+.footer-col h4::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  position: absolute;
+  background-color: #724ae8;
+  bottom: -10px;
+}
+
+.footer-col ul li a {
+  padding: 10px 0;
+}
+
+.footer-col ul li a {
+  color: #363636;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+}
+
+.footer-col input {
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 45px;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  padding-left: 20px;
+  margin: 14px 0;
+  border-radius: 5px;
+}
+
+.footer-col .inputSubmit {
+  padding: 0px 20px;
+  background-color: #724ae8;
+  border: none;
+  color: #fff;
+  display: inline-block;
+}
+
+.col p {
+  color: #363636;
+}
+
+hr {
+  margin-top: 250px;
+  margin-bottom: 0px;
+  opacity: 0.7;
+}
+
+.row .socialIcons i {
+  display: inline-block;
+  color: #363636;
+  font-size: 30px;
+  margin: 0 15px;
+  transition: 0.5s;
+}
+
+.row .socialIcons i:hover {
+  color: #724ae8;
+}
+
+.footer-col input input:is(:focus, :valid) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+/* ==-==-==-==-==-==-==-==-==-==-==-==-==-== Job Recommendation bot style ==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==- */
+/* .container .study{
+    height: 80vh;
+    width: 80%;
+    margin: 100px auto;
+    padding: 50px ;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+    display: flex;
+}
+
+form {
+    display: block;
+    margin: 10px;
+    width: 50%;
+    height: 100%;
+    
+}
+
+label {
+    color: #363636;
+}
+input{
+    margin-left: 50px;
+    padding-left: 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+}
+.img_container img{
+    display: flex;
+    flex-direction: row;
+} */
+
+.container2 {
+  display: flex; /* Add flex display to container */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.study {
+  height: 80vh;
+  width: 80%; /* Set width for study container */
+  margin: 100px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row; /* Change to column for smaller screens */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+label {
+  color: #363636;
+  padding: 10px;
+}
+
+input,
+select {
+  background: transparent;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #363636;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+#name {
+  margin-left: 50px; /* Reset margin */
+}
+
+input[type="date"],
+#percentage {
+  margin-left: 100px; /* Reset margin */
+}
+
+#gender {
+  margin-left: 70px; /* Reset margin */
+}
+
+#sslc_percentage,
+#hslc_or_diploma {
+  margin-left: 140px;
+}
+
+button {
+  height: 40px;
+  margin-top: 50px;
+  background-color: #724ae8;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #363636; /* Text color */
+  cursor: pointer;
+}
+
+.img_container {
+  width: 45%; /* Set width for image container */
+  display: flex;
+  padding-left: 70px;
+}
+
+.img_container img {
+  /* mix-blend-mode: multiply; */
+  padding: 10px;
+  width: 1000px;
+  height: auto; /* Maintain aspect ratio */
+  /* background: none; */
+}
+
+/* ===================================== CHAT BOT ==================================================== */
+
+/* Import Google font - Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #E3F2FD;
+} */
+.chatbot {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%; /* Set width for study container */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  pointer-events: auto;
+  transform: scale(1);
+  transition: all 0.1s ease;
+}
+
+.chatbot header {
+  padding: 16px 0;
+  position: relative;
+  text-align: center;
+  color: #363636;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.chatbot header span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.chatbot p {
+  margin-top: 25px;
+  color: #363636;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+header h2 {
+  font-size: 1.4rem;
+}
+
+.chatbot .chatbox {
+  overflow-y: auto;
+  height: 845px;
+  padding: 30px 20px 100px;
+}
+
+.chatbox .chat {
+  display: flex;
+  list-style: none;
+}
+
+.chatbox .outgoing {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+
+.chatbox .incoming span {
+  width: 32px;
+  height: 32px;
+  color: #363636;
+  cursor: default;
+  text-align: center;
+  line-height: 32px;
+  align-self: flex-end;
+  background: #724ae8;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+}
+
+.chatbox .chat p {
+  white-space: pre-wrap;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  max-width: 75%;
+  color: #363636;
+  font-size: 0.95rem;
+  background: #724ae8;
+}
+
+.chatbox .incoming p {
+  color: #363636;
+  background: #f2f2f2;
+}
+
+.chatbot .chat-input {
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  left: 275px;
+  bottom: 50px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  padding: 3px 20px;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+.chat-input textarea {
+  height: 55px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  max-height: 180px;
+  padding: 15px 15px 15px 15px;
+  font-size: 1rem;
+  background: transparent;
+  color: #363636;
+}
+
+.chat-input span {
+  align-self: flex-end;
+  color: #724ae8;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  /* visibility: hidden; */
+  font-size: 2.2rem;
+}
+
+.chat-input textarea:valid ~ span {
+  visibility: visible;
+}
+@media only screen and (max-width: 767px) {
+  .study {
+    width: 100%;
+  }
+
+  .img_container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .chatbox {
+    height: 80vh;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  .chat-input textarea {
+    height: 45px;
+  }
+
+}
+@media (max-width: 490px) {
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+  .chatbot .chatbox {
+    height: 90%;
+    padding: 25px 15px 100px;
+  }
+  .chatbot .chat-input {
+    padding: 5px 15px;
+  }
+  .chatbot header span {
+    display: block;
+  }
+}
