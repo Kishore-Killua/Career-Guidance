@@ -3,3 +3,4 @@ flask_session
 pandas
 scikit-learn
 gunicorn
+flask_mysqldb
